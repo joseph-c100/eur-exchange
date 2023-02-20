@@ -1,17 +1,17 @@
-const url = "https://api.coindesk.com/v1/bpi/currentprice.json"
-let currency = "GBP"
+const url = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json"
+let currency = "gbp"
 
 const priceTag = document.querySelector("h1")
 const spanTag = document.querySelector("span")
 
-// function to grab data from coindesk
+// function to grab data from exchange API
 const checkPrice = function () {
 
     fetch(url)
         .then(response => response.json())
         .then(jsonData => {
-            priceTag.innerHTML = jsonData.bpi[currency].rate_float.toFixed(1)
-            // toFixed(1) formats data to one decimal place
+            priceTag.innerHTML = jsonData.eur[currency].toFixed(3)
+            // toFixed(3) formats data to 3 decimal place
         })
 }
 

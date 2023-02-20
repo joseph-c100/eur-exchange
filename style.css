@@ -3,9 +3,9 @@
 
 body {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
 
-    background-color: black;
+    background-color: rgb(31, 31, 31);
     color: aliceblue;
 
     overflow: hidden;
@@ -39,6 +39,10 @@ nav a {
 
 nav a.selected {
     color: aliceblue;
+}
+
+span {
+    text-transform: uppercase;
 }
 
 @media screen and (max-width: 1000px) {
